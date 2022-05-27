@@ -1,0 +1,148 @@
+[gd_scene load_steps=19 format=2]
+
+[ext_resource path="res://Resources/Backgrounds/back3.png" type="Texture" id=1]
+[ext_resource path="res://Scripts/ButtonsContainer.cs" type="Script" id=2]
+[ext_resource path="res://Resources/Fonts/11872.otf" type="DynamicFontData" id=3]
+
+[sub_resource type="DynamicFont" id=1]
+size = 72
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 3 )
+
+[sub_resource type="StyleBoxEmpty" id=2]
+
+[sub_resource type="StyleBoxEmpty" id=3]
+
+[sub_resource type="StyleBoxEmpty" id=4]
+
+[sub_resource type="StyleBoxEmpty" id=5]
+
+[sub_resource type="StyleBoxEmpty" id=6]
+
+[sub_resource type="DynamicFont" id=7]
+size = 36
+font_data = ExtResource( 3 )
+
+[sub_resource type="StyleBoxEmpty" id=8]
+
+[sub_resource type="StyleBoxEmpty" id=9]
+
+[sub_resource type="StyleBoxEmpty" id=10]
+
+[sub_resource type="StyleBoxEmpty" id=11]
+
+[sub_resource type="StyleBoxEmpty" id=12]
+
+[sub_resource type="DynamicFont" id=13]
+size = 36
+font_data = ExtResource( 3 )
+
+[sub_resource type="CanvasItemMaterial" id=14]
+light_mode = 1
+
+[sub_resource type="Gradient" id=15]
+offsets = PoolRealArray( 0, 3.35988e-16 )
+colors = PoolColorArray( 0.160784, 0.152941, 0.152941, 1, 0.160784, 0.0313726, 0.0313726, 1 )
+
+[node name="MainMenu" type="Node"]
+
+[node name="Background" type="TextureRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 1 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Dungeon Hunter" type="Label" parent="."]
+margin_left = 61.0
+margin_top = 109.0
+margin_right = 555.0
+margin_bottom = 182.0
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0.847059, 0.847059, 0.847059, 1 )
+custom_colors/font_color_shadow = Color( 0.34902, 0.403922, 1, 1 )
+text = "Dungeon Hunter"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ButtonsContainer" type="VBoxContainer" parent="."]
+anchor_left = 0.05
+anchor_top = 0.333
+anchor_right = 0.05
+anchor_bottom = 0.366
+margin_left = -1.49835
+margin_top = -1.49829
+margin_right = 164.502
+margin_bottom = 134.742
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="New Game" type="Button" parent="ButtonsContainer"]
+margin_right = 166.0
+margin_bottom = 37.0
+custom_styles/hover = SubResource( 2 )
+custom_styles/pressed = SubResource( 3 )
+custom_styles/focus = SubResource( 4 )
+custom_styles/disabled = SubResource( 5 )
+custom_styles/normal = SubResource( 6 )
+custom_fonts/font = SubResource( 7 )
+text = "New game"
+
+[node name="Continue" type="Button" parent="ButtonsContainer"]
+margin_top = 41.0
+margin_right = 166.0
+margin_bottom = 78.0
+custom_styles/hover = SubResource( 2 )
+custom_styles/pressed = SubResource( 3 )
+custom_styles/focus = SubResource( 4 )
+custom_styles/disabled = SubResource( 5 )
+custom_styles/normal = SubResource( 6 )
+custom_fonts/font = SubResource( 7 )
+text = "Continue"
+
+[node name="Options" type="Button" parent="ButtonsContainer"]
+margin_top = 82.0
+margin_right = 166.0
+margin_bottom = 119.0
+custom_styles/hover = SubResource( 2 )
+custom_styles/pressed = SubResource( 3 )
+custom_styles/focus = SubResource( 4 )
+custom_styles/disabled = SubResource( 5 )
+custom_styles/normal = SubResource( 6 )
+custom_fonts/font = SubResource( 7 )
+text = "Options"
+
+[node name="Exit" type="Button" parent="ButtonsContainer"]
+margin_top = 123.0
+margin_right = 166.0
+margin_bottom = 160.0
+custom_styles/hover = SubResource( 8 )
+custom_styles/pressed = SubResource( 9 )
+custom_styles/focus = SubResource( 10 )
+custom_styles/disabled = SubResource( 11 )
+custom_styles/normal = SubResource( 12 )
+custom_fonts/font = SubResource( 13 )
+text = "Exit"
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="."]
+visible = false
+material = SubResource( 14 )
+position = Vector2( -10.587, 516.072 )
+scale = Vector2( 6, 6 )
+amount = 20
+lifetime = 3.0
+gravity = Vector2( 0, 100 )
+orbit_velocity = 0.5
+radial_accel = 100.0
+radial_accel_random = 0.35
+damping_random = 1.0
+scale_amount = 1.5
+color_ramp = SubResource( 15 )
+
+[connection signal="pressed" from="ButtonsContainer/New Game" to="ButtonsContainer" method="_OnStartPressed"]
+[connection signal="pressed" from="ButtonsContainer/Continue" to="ButtonsContainer" method="_OnStartPressed"]

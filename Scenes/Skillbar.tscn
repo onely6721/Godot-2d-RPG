@@ -1,0 +1,201 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://Resources/Skills/skillbar.png" type="Texture" id=1]
+[ext_resource path="res://Resources/Skills/attack.png" type="Texture" id=2]
+[ext_resource path="res://Resources/Skills/heal.png" type="Texture" id=3]
+[ext_resource path="res://Resources/Skills/buff.png" type="Texture" id=4]
+[ext_resource path="res://Resources/Skills/attack_2.png" type="Texture" id=5]
+[ext_resource path="res://Scripts/Skillbar.cs" type="Script" id=6]
+[ext_resource path="res://Resources/Skills/cooldown.png" type="Texture" id=7]
+[ext_resource path="res://Scripts/DefaultAttack.gd" type="Script" id=8]
+
+[node name="Skillbar" type="TextureRect"]
+margin_right = 346.0
+margin_bottom = 232.0
+texture = ExtResource( 1 )
+script = ExtResource( 6 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="DefaultAttack" type="TextureRect" parent="."]
+margin_left = 19.0
+margin_top = 12.0
+margin_right = 61.0
+margin_bottom = 54.0
+texture = ExtResource( 2 )
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Black" type="TextureRect" parent="DefaultAttack"]
+self_modulate = Color( 1, 1, 1, 0.670588 )
+margin_left = 0.0405998
+margin_top = -1.05109
+margin_right = 42.0406
+margin_bottom = 40.9489
+texture = ExtResource( 7 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Key" type="Label" parent="DefaultAttack"]
+margin_left = 33.0406
+margin_top = 30.9489
+margin_right = 49.0406
+margin_bottom = 44.9489
+text = "Q"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Timer" type="Timer" parent="DefaultAttack"]
+wait_time = 3.0
+one_shot = true
+
+[node name="Cooldown" type="Label" parent="DefaultAttack"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -4.0
+margin_top = -7.0
+margin_right = 4.0
+margin_bottom = 7.0
+text = "1"
+
+[node name="FireAttack" type="TextureRect" parent="."]
+margin_left = 103.0
+margin_top = 11.0
+margin_right = 145.0
+margin_bottom = 53.0
+texture = ExtResource( 5 )
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Black" type="TextureRect" parent="FireAttack"]
+self_modulate = Color( 1, 1, 1, 0.670588 )
+margin_left = 0.040596
+margin_top = -1.05109
+margin_right = 42.0406
+margin_bottom = 40.9489
+texture = ExtResource( 7 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Key" type="Label" parent="FireAttack"]
+margin_left = 33.6739
+margin_top = 31.5514
+margin_right = 49.6739
+margin_bottom = 45.5514
+text = "E"
+
+[node name="Timer" type="Timer" parent="FireAttack"]
+wait_time = 5.0
+one_shot = true
+
+[node name="Cooldown" type="Label" parent="FireAttack"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -4.0
+margin_top = -7.0
+margin_right = 4.0
+margin_bottom = 7.0
+text = "1"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Buff" type="TextureRect" parent="."]
+margin_left = 187.0
+margin_top = 11.0
+margin_right = 229.0
+margin_bottom = 53.0
+texture = ExtResource( 4 )
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Black" type="TextureRect" parent="Buff"]
+self_modulate = Color( 1, 1, 1, 0.670588 )
+margin_left = 0.0406036
+margin_top = -1.05109
+margin_right = 42.0406
+margin_bottom = 40.9489
+texture = ExtResource( 7 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Key" type="Label" parent="Buff"]
+margin_left = 33.6739
+margin_top = 31.5514
+margin_right = 49.6739
+margin_bottom = 45.5514
+text = "F"
+
+[node name="Timer" type="Timer" parent="Buff"]
+wait_time = 30.0
+one_shot = true
+
+[node name="Cooldown" type="Label" parent="Buff"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -5.42999
+margin_top = -6.92862
+margin_right = 2.57001
+margin_bottom = 7.07138
+text = "1"
+
+[node name="Heal" type="TextureRect" parent="."]
+margin_left = 270.0
+margin_top = 12.0
+margin_right = 312.0
+margin_bottom = 54.0
+texture = ExtResource( 3 )
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Black" type="TextureRect" parent="Heal"]
+self_modulate = Color( 1, 1, 1, 0.670588 )
+margin_left = 0.0406036
+margin_top = -1.05109
+margin_right = 42.0406
+margin_bottom = 40.9489
+texture = ExtResource( 7 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Key" type="Label" parent="Heal"]
+margin_left = 33.6739
+margin_top = 31.5514
+margin_right = 49.6739
+margin_bottom = 45.5514
+text = "G"
+
+[node name="Timer" type="Timer" parent="Heal"]
+wait_time = 10.0
+one_shot = true
+
+[node name="Cooldown" type="Label" parent="Heal"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -4.0
+margin_top = -7.0
+margin_right = 4.0
+margin_bottom = 7.0
+text = "0"

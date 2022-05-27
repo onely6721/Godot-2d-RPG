@@ -1,0 +1,56 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Resources/Inventory/Inventario.png" type="Texture" id=1]
+[ext_resource path="res://Scenes/Item.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Scripts/Inventory.cs" type="Script" id=3]
+[ext_resource path="res://Scenes/SkillTree.tscn" type="PackedScene" id=4]
+
+[node name="Inventory" type="Node2D"]
+position = Vector2( 641.79, 337.952 )
+z_index = 500
+script = ExtResource( 3 )
+
+[node name="TextureRect" type="TextureRect" parent="."]
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = 23.2806
+margin_top = -182.027
+margin_right = 527.281
+margin_bottom = 241.973
+texture = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SkillTree" parent="." instance=ExtResource( 4 )]
+position = Vector2( -359.792, -176.005 )
+
+[node name="Scroll" type="ScrollContainer" parent="."]
+anchor_left = 49.929
+anchor_right = 50.075
+anchor_bottom = 0.785
+margin_left = 49.541
+margin_top = -109.271
+margin_right = 561.541
+margin_bottom = 94.7295
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ItemsContainer" type="GridContainer" parent="Scroll"]
+margin_right = 32.0
+margin_bottom = 32.0
+rect_pivot_offset = Vector2( 20, 20 )
+columns = 5
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Item" parent="Scroll/ItemsContainer" instance=ExtResource( 2 )]
+margin_left = 0.0
+margin_top = 0.0
+margin_right = 32.0
+margin_bottom = 32.0
+rect_min_size = Vector2( 32, 32 )

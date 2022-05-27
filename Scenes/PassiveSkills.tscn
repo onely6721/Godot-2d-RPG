@@ -1,0 +1,277 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Resources/Skills/horror-red-3.png" type="Texture" id=1]
+[ext_resource path="res://Resources/Inventory/Layer 38 copy 6.png" type="Texture" id=2]
+[ext_resource path="res://Resources/Skills/runes-royal-2.png" type="Texture" id=3]
+
+[node name="PassiveSkills" type="Node2D"]
+
+[node name="Background" type="TextureRect" parent="."]
+margin_left = 0.749146
+margin_top = 1.49835
+margin_right = 274.749
+margin_bottom = 425.498
+texture = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Background"]
+margin_left = 107.708
+margin_top = 10.5946
+margin_right = 190.708
+margin_bottom = 24.5946
+text = "Passive"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Passive1" type="TextureRect" parent="."]
+margin_left = 27.6461
+margin_top = 79.2753
+margin_right = 67.6461
+margin_bottom = 119.275
+texture = ExtResource( 1 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Passive1"]
+margin_left = 41.2034
+margin_top = 1.4983
+margin_right = 81.2034
+margin_bottom = 15.4983
+text = "Attack. Dmg: 0"
+
+[node name="Label3" type="Label" parent="Passive1"]
+margin_left = 82.4949
+margin_top = 25.2475
+margin_right = 176.495
+margin_bottom = 39.2475
+custom_colors/font_color = Color( 0.560784, 0.129412, 0.733333, 1 )
+text = "Upgrade:"
+
+[node name="Button" type="Button" parent="Passive1"]
+margin_left = 146.878
+margin_top = 19.2238
+margin_right = 203.878
+margin_bottom = 39.2238
+custom_colors/font_color_disabled = Color( 0.180392, 0.494118, 0.419608, 1 )
+custom_colors/font_color = Color( 0.992157, 1, 0, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
+text = "1456g"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="Passive1"]
+margin_left = 43.4509
+margin_top = 25.4712
+margin_right = 83.4509
+margin_bottom = 39.4712
+custom_colors/font_color = Color( 0.505882, 0.635294, 0.556863, 1 )
+text = "Lvl 1"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Passive2" type="TextureRect" parent="."]
+margin_left = 28.3953
+margin_top = 134.713
+margin_right = 68.3953
+margin_bottom = 174.713
+texture = ExtResource( 1 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Passive2"]
+margin_left = 41.2034
+margin_top = 1.4983
+margin_right = 81.2034
+margin_bottom = 15.4983
+text = "Soul. Hp: 0"
+
+[node name="Label3" type="Label" parent="Passive2"]
+margin_left = 82.4949
+margin_top = 25.2475
+margin_right = 176.495
+margin_bottom = 39.2475
+custom_colors/font_color = Color( 0.560784, 0.129412, 0.733333, 1 )
+text = "Upgrade:"
+
+[node name="Button" type="Button" parent="Passive2"]
+margin_left = 145.987
+margin_top = 19.2238
+margin_right = 202.987
+margin_bottom = 39.2238
+custom_colors/font_color = Color( 0.992157, 1, 0, 1 )
+text = "1456g"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="Passive2"]
+margin_left = 43.4509
+margin_top = 25.4712
+margin_right = 83.4509
+margin_bottom = 39.4712
+custom_colors/font_color = Color( 0.505882, 0.635294, 0.556863, 1 )
+text = "Lvl 1"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Passive3" type="TextureRect" parent="."]
+margin_left = 27.3953
+margin_top = 192.397
+margin_right = 67.3953
+margin_bottom = 232.397
+texture = ExtResource( 1 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Passive3"]
+margin_left = 41.2034
+margin_top = 1.4983
+margin_right = 81.2034
+margin_bottom = 15.4983
+text = "Sage Mp: 0"
+
+[node name="Label3" type="Label" parent="Passive3"]
+margin_left = 82.4949
+margin_top = 25.2475
+margin_right = 176.495
+margin_bottom = 39.2475
+custom_colors/font_color = Color( 0.560784, 0.129412, 0.733333, 1 )
+text = "Upgrade:"
+
+[node name="Button" type="Button" parent="Passive3"]
+margin_left = 147.878
+margin_top = 19.2238
+margin_right = 204.878
+margin_bottom = 39.2238
+custom_colors/font_color = Color( 0.992157, 1, 0, 1 )
+text = "1456g"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="Passive3"]
+margin_left = 43.4509
+margin_top = 25.4712
+margin_right = 83.4509
+margin_bottom = 39.4712
+custom_colors/font_color = Color( 0.505882, 0.635294, 0.556863, 1 )
+text = "Lvl 1"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Passive4" type="TextureRect" parent="."]
+margin_left = 28.6461
+margin_top = 248.835
+margin_right = 68.6461
+margin_bottom = 288.835
+rect_pivot_offset = Vector2( 31.4644, 25.4712 )
+texture = ExtResource( 1 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Passive4"]
+margin_left = 41.2034
+margin_top = 1.4983
+margin_right = 81.2034
+margin_bottom = 15.4983
+text = "Attack. Dmg: 0"
+
+[node name="Label3" type="Label" parent="Passive4"]
+margin_left = 82.4949
+margin_top = 25.2475
+margin_right = 176.495
+margin_bottom = 39.2475
+custom_colors/font_color = Color( 0.560784, 0.129412, 0.733333, 1 )
+text = "Upgrade:"
+
+[node name="Button" type="Button" parent="Passive4"]
+margin_left = 146.878
+margin_top = 19.2238
+margin_right = 203.878
+margin_bottom = 39.2238
+custom_colors/font_color = Color( 0.992157, 1, 0, 1 )
+text = "1456g"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="Passive4"]
+margin_left = 43.4509
+margin_top = 25.4712
+margin_right = 83.4509
+margin_bottom = 39.4712
+rect_pivot_offset = Vector2( 119.361, 78.7918 )
+custom_colors/font_color = Color( 0.505882, 0.635294, 0.556863, 1 )
+text = "Lvl 1"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label4" type="Label" parent="."]
+margin_left = 57.8631
+margin_top = 308.767
+margin_right = 198.863
+margin_bottom = 322.767
+text = "Up to 10 lvl to unlock:"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Reborn" type="TextureRect" parent="."]
+margin_left = 108.806
+margin_top = 330.493
+margin_right = 148.806
+margin_bottom = 370.493
+texture = ExtResource( 3 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label6" type="Label" parent="Reborn"]
+margin_left = 47.9458
+margin_top = 23.973
+margin_right = 87.9458
+margin_bottom = 37.973
+rect_pivot_offset = Vector2( 119.361, 78.7918 )
+custom_colors/font_color = Color( 1, 0.72549, 0, 1 )
+text = "Lvl 0"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label5" type="Label" parent="Reborn"]
+margin_left = 46.3776
+margin_top = -0.990967
+margin_right = 93.3776
+margin_bottom = 13.009
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Reborn"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button2" type="Button" parent="Reborn"]
+margin_left = -6.69839
+margin_top = 51.4374
+margin_right = 50.3016
+margin_bottom = 71.4374
+text = "Unlock"
+__meta__ = {
+"_edit_use_anchors_": false
+}
