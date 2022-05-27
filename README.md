@@ -2,9 +2,9 @@
 Godot 2d RPG
 </h1>
 
-#Language C#
+# Language C#
 
-#Screenshots
+# Screenshots
 
 **Main Menu**
 ![MainMenu](https://github.com/onely6721/2dRPG/blob/main/Images/Main%20menu.png)
